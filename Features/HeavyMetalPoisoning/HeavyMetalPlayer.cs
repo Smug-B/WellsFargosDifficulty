@@ -67,7 +67,7 @@ namespace WellsFargosDifficulty.Features.HeavyMetalPoisoning
 
             foreach (HeavyMetalEffect heavyMetalEffect in LoadedEffects)
             {
-                heavyMetalEffect.Effect(Concentration);
+                heavyMetalEffect.Effect(Player, Concentration);
             }
         }
 

@@ -1,4 +1,5 @@
-﻿using Terraria.ModLoader;
+﻿using Terraria;
+using Terraria.ModLoader;
 
 namespace WellsFargosDifficulty.Features.HeavyMetalPoisoning
 {
@@ -8,6 +9,6 @@ namespace WellsFargosDifficulty.Features.HeavyMetalPoisoning
 
         public void Unload() { }
 
-        public abstract void Effect(int concentration);
+        public abstract void Effect(Player player, int concentration);
     }
 }

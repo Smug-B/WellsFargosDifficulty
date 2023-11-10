@@ -1,4 +1,6 @@
 ﻿using Microsoft.Xna.Framework;
+using System;
+using System.Collections.Generic;
 using Terraria;
 using Terraria.ModLoader;
 using Terraria.ModLoader.IO;
@@ -7,6 +9,12 @@ namespace WellsFargosDifficulty.Features.HeavyMetalPoisoning
 {
     public class HeavyMetalPlayer : ModPlayer
     {
+        /// <summary>
+        /// All loaded <see cref="HeavyMetalEffect"/>.
+        /// This will be used to apply effects based on <see cref="HeavyMetalConcentration"/>.
+        /// </summary>
+        public static IList<HeavyMetalEffect> LoadedEffects { get; private set; } = new List<HeavyMetalEffect>();
+
         /// <summary>
         /// How much heavy metal is 'in' a player.
         /// This is used to dynamically apply effects.
@@ -56,6 +64,16 @@ namespace WellsFargosDifficulty.Features.HeavyMetalPoisoning
                     HeavyMetalConcentration--;
                 }
             }
+
+            foreach (HeavyMetalEffect heavyMetalEffect in LoadedEffects)
+            {
+                heavyMetalEffect.Effect(HeavyMetalConcentration);
+            }
+        }
+
+        public override void Unload()
+        {
+            base.Unload();
         }
 
         public override void SaveData(TagCompound tag)

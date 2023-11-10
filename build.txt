@@ -1,0 +1,3 @@
+displayName = (Wells) Fargo's B.S. Difficulty
+author = Official Fargo Mod Discord Server
+version = 0.1

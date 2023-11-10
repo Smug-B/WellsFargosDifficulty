@@ -31,23 +31,37 @@ namespace WellsFargosDifficulty.Features.HeavyMetalPoisoning
         /// <summary>
         /// The value that <see cref="InteractionTimer"/> needs to meet before <see cref="Concentration"/> starts decreasing.
         /// </summary>
-        public int ReductionThreshold { get; set; }
+        public int ReductionThreshold { get; set; } = 3600;
+
+        /// <summary>
+        /// The time, in minutes, for maximum <see cref="Concentration"/> reduction to occur.
+        /// </summary>
+        public int MaximumReductionTime { get; set; } = 10;
 
         /// <summary>
         /// An internally used timer to help dynamically reduce <see cref="Concentration"/>
         /// </summary>
         public int ReductionTimer { get; private set; }
 
-        public override void ResetEffects() => InteractionTimer++;
+        public override void ResetEffects() => InteractionTimer = Math.Clamp(InteractionTimer + 1, 0, ReductionThreshold * MaximumReductionTime);
 
         public override void PreUpdateMovement()
         {
-            foreach (Point tilePosition in Player.TouchedTiles)
+            Point tilePositon = Player.Center.ToTileCoordinates();
+            for (int i = tilePositon.X - 1; i <= tilePositon.X + 2; i++)
             {
-                if (Main.IsTileSpelunkable(tilePosition.X, tilePosition.Y))
+                for (int j = tilePositon.Y - 2; j <= tilePositon.Y + 3; j++)
                 {
-                    Concentration++;
-                    InteractionTimer = 0;
+                    if (!WorldGen.InWorld(i, j))
+                    {
+                        continue;
+                    }
+
+                    if (Main.IsTileSpelunkable(i, j))
+                    {
+                        Concentration++;
+                        InteractionTimer = 0;
+                    }
                 }
             }
         }
@@ -57,8 +71,7 @@ namespace WellsFargosDifficulty.Features.HeavyMetalPoisoning
             if (InteractionTimer >= ReductionThreshold)
             {
                 ReductionTimer++;
-                // Hard-coded to take an hour before 
-                int threshold = Math.Clamp(60 - (InteractionTimer / ReductionThreshold), 1, 60);
+                int threshold = Math.Clamp(MaximumReductionTime - (InteractionTimer / ReductionThreshold), 1, MaximumReductionTime);
                 if (ReductionTimer % threshold == 0)
                 {
                     Concentration--;

@@ -33,15 +33,12 @@ namespace WellsFargosDifficulty.Features.AdaptiveEconomy
            new Tuple<float, double>(1.045f, 0.15),
            new Tuple<float, double>(1.05f, 0.1));
 
-        public override void Load()
-        {
-            void ApplyInflationRates(On_Player.orig_GetItemExpectedPrice orig, Player self, Item item, out long calcForSelling, out long calcForBuying)
-            {
-                orig(self, item, out calcForSelling, out calcForBuying);
-                calcForBuying = (long)(TotalMultiplier * calcForBuying);
-            }
+        public override void Load() => On_Player.GetItemExpectedPrice += ApplyInflationRates;
 
-            On_Player.GetItemExpectedPrice += ApplyInflationRates;
+        public void ApplyInflationRates(On_Player.orig_GetItemExpectedPrice orig, Player self, Item item, out long calcForSelling, out long calcForBuying)
+        {
+            orig(self, item, out calcForSelling, out calcForBuying);
+            calcForBuying = (long)(TotalMultiplier * calcForBuying);
         }
 
         public override void PostUpdateEverything()

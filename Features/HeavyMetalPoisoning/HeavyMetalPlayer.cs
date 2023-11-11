@@ -58,7 +58,8 @@ namespace WellsFargosDifficulty.Features.HeavyMetalPoisoning
                         continue;
                     }
 
-                    if (Main.IsTileSpelunkable(i, j))
+                    Tile tile = Framing.GetTileSafely(i, j);
+                    if (Main.tileSolid[tile.TileType] && Main.IsTileSpelunkable(i, j))
                     {
                         Concentration++;
                         InteractionTimer = 0;

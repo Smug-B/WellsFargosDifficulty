@@ -9,6 +9,8 @@ namespace WellsFargosDifficulty.Features.HeavyMetalPoisoning
 
         public void Unload() { }
 
-        public abstract void Effect(Player player, int concentration);
+        public virtual void GeneralEffects(Player player, int concentration) { }
+
+        public virtual void BadLifeRegenEffects(Player player, int concentration) { }
     }
 }

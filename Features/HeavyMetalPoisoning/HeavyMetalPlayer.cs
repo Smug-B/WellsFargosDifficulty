@@ -65,6 +65,13 @@ namespace WellsFargosDifficulty.Features.HeavyMetalPoisoning
                 }
             }
         }
+        public override void UpdateBadLifeRegen()
+        {
+            foreach (HeavyMetalEffect heavyMetalEffect in LoadedEffects)
+            {
+                heavyMetalEffect.BadLifeRegenEffects(Player, Concentration);
+            }
+        }
 
         public override void PostUpdateBuffs()
         {
@@ -80,7 +87,7 @@ namespace WellsFargosDifficulty.Features.HeavyMetalPoisoning
 
             foreach (HeavyMetalEffect heavyMetalEffect in LoadedEffects)
             {
-                heavyMetalEffect.Effect(Player, Concentration);
+                heavyMetalEffect.GeneralEffects(Player, Concentration);
             }
         }
 

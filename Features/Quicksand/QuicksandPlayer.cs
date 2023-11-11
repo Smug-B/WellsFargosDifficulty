@@ -78,7 +78,7 @@ namespace WellsFargosDifficulty.Features.Quicksand
         {
             if (Player.velocity.X != 0 || Player.velocity.Y < 0)
             {
-                LastMoved -= 10;
+                LastMoved -= LastMovedThreshold / 10;
                 return;
             }
 

@@ -1,1 +1,18 @@
-(Wells) Fargo's B.S. Difficulty is a pretty cool mod, it does...this. Modify this file with a description of your mod.
+"If God exists and they are to be omnipotent, omniscient, and omnibenevolent, then why did they let this mod exist?"
+
+Fargo's* B.S. Difficulty is a unique (Fargonian) take on adding difficulty to Terraria. Whereas other mods, and even Vanilla, depend on simple stat boosts or modifying bosses to just spam more projectiles, Fargo’s B.S. Difficulty is designed to make your experience hell from the get go!
+
+# Current Features:
+🏦 Adaptive Economy 🏦: Revolutionizes Terraria’s economic system while adding a hint of increased difficulty through incorporating real world economic principles into the game! You may not see the full effects of this on day one of your play through, but, as you go on, you definitely will!
+
+🪨 Realistic Ore Interactions 🤢: Where you walk will be important! Make sure not to stay around heavy metals for too long because that might lead to some bad side effects…
+
+🤑 Matthew Principle 🤑: We can’t deny the truth that we see in society – especially since the pandemic – in that the rich seem to get richer while the poor stay poor. So we here at the Official Fargo’s B.S. Difficulty team thought to incorporate this principle into Terraria!
+
+🏜️ Quick Sand 🏜️: You may find quicksand during your journey. We won’t spoil much but just know that this feature is backwards compatible! You DON’T need to generate a new world!
+
+# In the Works:
+😨 General NPC AI Changes 😨: We don’t intend for just bosses to be the highlight of this difficulty experience! Every NPC you encounter should, at some point, pose a significant threat on your journey to mastering all the souls!
+
+* = (Wells) Fargo's. We retain neither affiliation with Wells Fargo nor the Anti-Fargo.
+

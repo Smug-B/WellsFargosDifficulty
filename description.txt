@@ -3,6 +3,8 @@
 Fargo's* B.S. Difficulty is a unique (Fargonian) take on adding difficulty to Terraria. Whereas other mods, and even Vanilla, depend on simple stat boosts or modifying bosses to just spam more projectiles, Fargo’s B.S. Difficulty is designed to make your experience hell from the get go!
 
 # Current Features:
+**NEW** 😵‍💫 Concussive Impact 😵‍💫 **NEW**: Disincentivises getting hit hard, you’ll be scrambling in the pocket in order to avoid those high damage attacks!
+
 🏦 Adaptive Economy 🏦: Revolutionizes Terraria’s economic system while adding a hint of increased difficulty through incorporating real world economic principles into the game! You may not see the full effects of this on day one of your play through, but, as you go on, you definitely will!
 
 🪨 Realistic Ore Interactions 🤢: Where you walk will be important! Make sure not to stay around heavy metals for too long because that might lead to some bad side effects…

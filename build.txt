@@ -1,4 +1,4 @@
 displayName = Fargo's B.S. Difficulty
 author = Official Fargo Mod Discord Server
-version = 0.1.1
+version = 0.1.2
 homepage = https://discord.com/invite/fargo

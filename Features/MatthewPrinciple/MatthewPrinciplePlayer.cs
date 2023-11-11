@@ -39,6 +39,7 @@ namespace WellsFargosDifficulty.Features.MatthewPrinciple
         {
             IL_NPC.NPCLoot_DropMoney += ApplyMatthewPrinciple;
             IL_CoinsRule.TryDroppingItem += ApplyMatthewPrincipleForBags;
+            On_Player.GetItemExpectedPrice += ApplyMatthewPrincipleForShops;
         }
 
         private void ApplyMatthewPrinciple(ILContext il)
@@ -65,6 +66,13 @@ namespace WellsFargosDifficulty.Features.MatthewPrinciple
 
             cursor.EmitDelegate(() => (double)Main.LocalPlayer.GetModPlayer<MatthewPrinciplePlayer>().WealthAccruementMultiplier);
             cursor.Emit(OpCodes.Mul);
+        }
+
+        private void ApplyMatthewPrincipleForShops(On_Player.orig_GetItemExpectedPrice orig, Player self, Item item, out long calcForSelling, out long calcForBuying)
+        {
+            orig(self, item, out calcForSelling, out calcForBuying);
+            float modifiedWealthAccrumentMultiplier = (self.GetModPlayer<MatthewPrinciplePlayer>().WealthAccruementMultiplier * 0.75f) + 0.25f;
+            calcForSelling = (long)(modifiedWealthAccrumentMultiplier * calcForSelling);
         }
     }
 }

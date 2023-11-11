@@ -91,6 +91,12 @@ namespace WellsFargosDifficulty.Features.HeavyMetalPoisoning
             }
         }
 
+        public override void UpdateDead()
+        {
+            Concentration = 0;
+            InteractionTimer = 0;
+        }
+
         public override void Unload() => LoadedEffects.Clear();
 
         public override void SaveData(TagCompound tag)

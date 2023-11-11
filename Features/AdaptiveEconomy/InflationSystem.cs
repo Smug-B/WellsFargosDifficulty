@@ -38,7 +38,7 @@ namespace WellsFargosDifficulty.Features.AdaptiveEconomy
         public void ApplyInflationRates(On_Player.orig_GetItemExpectedPrice orig, Player self, Item item, out long calcForSelling, out long calcForBuying)
         {
             orig(self, item, out calcForSelling, out calcForBuying);
-            calcForBuying = (long)(TotalMultiplier * calcForBuying);
+            calcForBuying = (long)(ModContent.GetInstance<InflationSystem>().TotalMultiplier * calcForBuying);
         }
 
         public override void PostUpdateEverything()

@@ -66,6 +66,7 @@ namespace WellsFargosDifficulty.Features.HeavyMetalPoisoning
                 }
             }
         }
+
         public override void UpdateBadLifeRegen()
         {
             foreach (HeavyMetalEffect heavyMetalEffect in LoadedEffects)

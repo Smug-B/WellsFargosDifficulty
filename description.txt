@@ -14,5 +14,11 @@ Fargo's* B.S. Difficulty is a unique (Fargonian) take on adding difficulty to Te
 # In the Works:
 😨 General NPC AI Changes 😨: We don’t intend for just bosses to be the highlight of this difficulty experience! Every NPC you encounter should, at some point, pose a significant threat on your journey to mastering all the souls!
 
+🤫 CLASSIFIED 🤫: Join the OFFICIAL FARGO'S MOD DISCORD: https://discord.com/invite/fargo or discord.gg/fargo to get an early access!
+
+# General Information:
+Open sourced at: https://github.com/Smug-B/WellsFargosDifficulty
+Join the OFFICIAL FARGO'S* MODS DISCORD: https://discord.com/invite/fargo or discord.gg/fargo
+
 * = (Wells) Fargo's. We retain neither affiliation with Wells Fargo nor the Anti-Fargo.
 

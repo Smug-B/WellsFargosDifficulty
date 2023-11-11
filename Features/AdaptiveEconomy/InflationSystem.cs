@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using Terraria;
 using Terraria.ModLoader;
 using Terraria.ModLoader.IO;
@@ -59,9 +60,13 @@ namespace WellsFargosDifficulty.Features.AdaptiveEconomy
             }
         }
 
+        public override void NetSend(BinaryWriter writer) => writer.Write(TotalMultiplier);
+
         public override void LoadWorldData(TagCompound tag)
         {
             TotalMultiplier = tag.TryGet(nameof(TotalMultiplier), out float value) ? value : 0;
         }
+
+        public override void NetReceive(BinaryReader reader) => TotalMultiplier = reader.ReadSingle();
     }
 }

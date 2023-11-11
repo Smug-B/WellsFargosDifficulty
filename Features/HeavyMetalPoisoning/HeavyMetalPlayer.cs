@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using Terraria;
+using Terraria.DataStructures;
 using Terraria.ModLoader;
 using Terraria.ModLoader.IO;
 
@@ -91,12 +92,21 @@ namespace WellsFargosDifficulty.Features.HeavyMetalPoisoning
             }
         }
 
+        public override bool PreKill(double damage, int hitDirection, bool pvp, ref bool playSound, ref bool genDust, ref PlayerDeathReason damageSource)
+        {
+            foreach (HeavyMetalEffect heavyMetalEffect in LoadedEffects)
+            {
+                heavyMetalEffect.PreKillEffects(Player, Concentration, damage, hitDirection, pvp, ref playSound, ref genDust, ref damageSource);
+            }
+            return true;
+        }
+
         public override void UpdateDead()
         {
             Concentration = 0;
             InteractionTimer = 0;
         }
-
+ 
         public override void Unload() => LoadedEffects.Clear();
 
         public override void SaveData(TagCompound tag)

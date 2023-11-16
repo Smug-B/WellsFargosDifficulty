@@ -2,8 +2,12 @@
 
 Fargo's* B.S. Difficulty is a unique (Fargonian) take on adding difficulty to Terraria. Whereas other mods, and even Vanilla, depend on simple stat boosts or modifying bosses to just spam more projectiles, Fargo’s B.S. Difficulty is designed to make your experience hell from the get go!
 
+Join the OFFICIAL FARGO'S* MODS DISCORD: https://discord.com/invite/fargo or discord.gg/fargo
+
 # Current Features:
-**NEW** 😵‍💫 Concussive Impact 😵‍💫 **NEW**: Disincentivises getting hit hard, you’ll be scrambling in the pocket in order to avoid those high damage attacks!
+**NEW** 🕊️ Icarus’ Folly 🕊️ **NEW**: “Proud of his success, the foolish Icarus forsook his guide, and, bold in vanity, began to soar, rising upon his wings to touch the skies.” Don’t become too comfortable just because you have wings!
+
+😵‍💫 Concussive Impact 😵‍💫: Disincentivises getting hit hard, you’ll be scrambling in the pocket in order to avoid those high damage attacks!
 
 🏦 Adaptive Economy 🏦: Revolutionizes Terraria’s economic system while adding a hint of increased difficulty through incorporating real world economic principles into the game! You may not see the full effects of this on day one of your play through, but, as you go on, you definitely will!
 
@@ -16,11 +20,10 @@ Fargo's* B.S. Difficulty is a unique (Fargonian) take on adding difficulty to Te
 # In the Works:
 😨 General NPC AI Changes 😨: We don’t intend for just bosses to be the highlight of this difficulty experience! Every NPC you encounter should, at some point, pose a significant threat on your journey to mastering all the souls!
 
-🤫 CLASSIFIED 🤫: Join the OFFICIAL FARGO'S MOD DISCORD: https://discord.com/invite/fargo or discord.gg/fargo to get an early access!
+🤫 CLASSIFIED 🤫: Join the OFFICIAL FARGO'S* MOD DISCORD: https://discord.com/invite/fargo or discord.gg/fargo to get an early access!
 
 # General Information:
 Open sourced at: https://github.com/Smug-B/WellsFargosDifficulty
 Join the OFFICIAL FARGO'S* MODS DISCORD: https://discord.com/invite/fargo or discord.gg/fargo
 
-* = (Wells) Fargo's. We retain neither affiliation with Wells Fargo nor the Anti-Fargo.
-
+* = (Wells) Fargo's. We retain neither affiliation with Wells Fargo nor Fargo's Mutants Mod (the Anti-Fargo) or its derivatives.
